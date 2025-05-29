@@ -1,0 +1,56 @@
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #b6d6ca, #03381b); 
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .form-container {
+      background-color: #fffdfd;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+     
+    }
+
+    h3 {
+      text-align: center;
+      color: black;
+     
+     
+    }
+
+    #guardar {
+      width: 50%;
+    }
+
+    /* Imágenes decorativas */
+    .img-top-left,
+    .img-bottom-right {
+      position: absolute;
+      width: 120px;
+      height: auto;
+      opacity: 0.9;
+    }
+
+    .img-top-left {
+      top: 20px;
+      left: 20px;
+      height: auto;
+      width: auto;
+    }
+
+    .img-bottom-right {
+      bottom: 20px;
+      right: 20px;
+      height: auto;
+      width: auto;
+    }
