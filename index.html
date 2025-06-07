@@ -49,11 +49,18 @@
                 </div>
                 <br>
                 <div class="form-group col-md-6 mb-3">
-                    <label for="confirmarContraseña">Confrimar Contraseña</label>
-                    <input type="password" name="" id="confirmarContraseña" placeholder="Confirmar contraseña "
-                        class="form-control" required>
+                    <label for="confirmarContraseña">Confirmar Contraseña</label>
+                    <div class="input-group">
+                        <input type="password" id="confirmarContraseña" class="form-control"
+                            placeholder="Confirmar contraseña" required>
+                        <button type="button" class="btn btn-outline-secondary" id="verConfirmarContraseña"
+                            style="color: rgb(255, 255, 255); font-size: 1.2rem;">
+                            👁
+                        </button>
+                    </div>
                     <div class="errorValidación" id="error" style="color: red; margin-top: 5px;"></div>
                 </div>
+
                 <br>
                 <div class="col-lg-12 mt-4">
                     <input type="submit" value="Guardar" class=" btn btn-danger" id="guardar">
