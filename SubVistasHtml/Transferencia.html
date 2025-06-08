@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Transferir</title>
+</head>
+<body>
+  <header>
+    <h2>Transferencia</h2>
+  </header>
+
+  <main>
+    <div>
+      <label for="usuarioDestino">Correo de usuario que recibe: </label>
+      <input type="text" id="usuarioDestino" placeholder="Ingrese el usuario" />
+    </div>
+
+    <div>
+      <label for="montoTransferencia">Cantidad a transferir: </label>
+      <input type="number" id="montoTransferencia" placeholder="Ingrese la cantidad" />
+    </div>
+
+    <div id="mensajeError"></div>
+    <div id="mensajeExito"></div>
+
+    <button id="realizarTransferencia">Transferir</button>
+  </main>
+
+  <footer>
+    <a href="..//UsuarioHtml/Menu.html">Volver al menú</a>
+  </footer>
+
+  <script src="../JS/Transferencia.js"></script>
+</body>
+</html>

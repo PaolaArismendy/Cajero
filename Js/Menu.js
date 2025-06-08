@@ -1,11 +1,11 @@
 
 // Asociar cada botón con una URL
 document.getElementById("consultar-saldo").addEventListener("click", function (event) {
-    window.location.href = "consultar_saldo.html";
+    window.location.href = "../SubvistasHtml/Consultar.html";
 });
 
 document.getElementById("transferir").addEventListener("click", function (event) {
-    window.location.href = "transferir.html";
+    window.location.href = "../SubVistasHtml/Transferencia.html";
 });
 
 document.getElementById("consignar").addEventListener("click", function (event) {

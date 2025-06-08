@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cajero</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- imagenes -->
+        <img src="..//IMG/imagenBanco.png" alt="Imagen Banco">
+        <img src="..//IMG/imagenAlcancia.png" alt="Ahorro">
+
+        <h3>Diligencie el siguiente formulario para empezar su inicio de sesión : </h3>
+    </header>
+
+    <main>
+        <!-- FORMULARIO -->
+        <form action="">
+
+            <div>
+
+                <div>
+                    <label for="usuario">Correo Electronico</label><br>
+                    <input type="email" id="usuario" placeholder="Ingrese su correo electronico" required>
+                </div>
+                <br>
+                <div>
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" id="contraseña" placeholder="Ingrese una contraseña" required>
+                    <button type="button" id="mostrarContraseña">👁</button>
+                </div>
+                <br>
+                <div>
+                    <label for="confirmarContraseña">Confirmar Contraseña</label><br>
+                    <input type="password" id="confirmarContraseña" placeholder="Confirmar contraseña" required>
+                    <button type="button" id="verConfirmarContraseña">👁</button>
+                    <div id="error" style="color: red; margin-top: 5px;"></div>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Guardar" id="guardar">
+                </div>
+
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="..//JS/Registro.js"></script>
+
+</body>
+
+</html>
