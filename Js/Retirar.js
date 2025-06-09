@@ -1,27 +1,37 @@
-localStorage.setItem("usuario", "jzapata@gmail.com");
+const usuarioOnline = localStorage.getItem("usuarioOnline");
 
-const usuarioRetiro = localStorage.getItem("usuario");
+if (!usuarioOnline) {
+    alert("No hay un usuario en sesión.");
+}
 
+document.getElementById("retirar").addEventListener('click', function () {
+    const usuarioInput = document.getElementById("usuario-retiro").value.trim();
+    const monto = parseFloat(document.getElementById("cantidad").value);
+    const categoria = document.getElementById("categoria").value; // se puede usar luego para movimientos
 
-document.getElementById("retirar").addEventListener('click', function retirar() {
-
-    let usuario = document.getElementById("usuario-retiro").value;
-    let monto = parseFloat(document.getElementById("cantidad").value);
-    let categoria = document.getElementById("categoria").value; //aun no se utiliza llegara a utilizarse en ver movimiento
-    let montoprovicional = 200000;
-
-    if (usuario == usuarioRetiro) {
-
-        if (monto>0 && monto<= montoprovicional) {
-
-            montoprovicional-=monto;
-            alert(`Retiro exitoso!,ahora tu saldo es de: ${montoprovicional}`)
-        }else{
-            alert("monto insuficiente")
-        }
-
-    }else{
-        alert("Usurio no existente")
+    // Validación de entrada
+    if (!usuarioInput || isNaN(monto) || monto <= 0) {
+        alert("Por favor, ingresa un usuario válido y un monto mayor a 0.");
+        return;
     }
-})
 
+    // Validar que el usuario ingresado sea el mismo que el que está en sesión
+    if (usuarioInput !== usuarioOnline) {
+        alert("Error: Solo puedes retirar de tu propia cuenta.");
+        return;
+    }
+
+    // Obtener el saldo actual del usuario
+    let saldoActual = parseFloat(localStorage.getItem("saldo_" + usuarioOnline)) || 0;
+
+    if (monto > saldoActual) {
+        alert("Fondos insuficientes. Tu saldo actual es: $" + saldoActual.toLocaleString());
+        return;
+    }
+
+    // Descontar monto y actualizar saldo
+    const nuevoSaldo = saldoActual - monto;
+    localStorage.setItem("saldo_" + usuarioOnline, nuevoSaldo);
+
+    alert(`Retiro exitoso. Tu nuevo saldo es: $${nuevoSaldo.toLocaleString()}`);
+});
